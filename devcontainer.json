@@ -1,0 +1,24 @@
+{
+  "name": "Python Development",
+  "dockerComposeFile": "./compose.yml",
+  "service": "jupyter",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker", // Code Spell Checker: Spelling checker for source code
+        "oderwat.indent-rainbow",  // Indent Rainbow: Colorizes indentation in source code
+        "github.copilot",  // GitHub Copilot: AI pair programmer
+        "github.copilot-chat",  // GitHub Copilot Chat: Chat with GitHub Copilot
+        "christian-kohler.path-intellisense",  // Path Intellisense: Autocompletes filenames
+        "shardulm94.trailing-spaces",  // Trailing Spaces: Highlights trailing spaces
+        "eamodio.gitlens",  // GitLens: Git supercharged
+        "donjayamanne.githistory",  // Git History: View and search Git history
+        "mhutchie.git-graph",  // Git Graph: View a Git Graph of your repository
+        "gruntfuggly.todo-tree",  // Todo Tree: Show TODO, FIXME, etc. comments
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  }
+}
