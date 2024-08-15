@@ -3,6 +3,10 @@ FROM python:3.12.5-bullseye
 ARG USER_ID
 ARG GROUP_ID
 ARG USER_NAME
+ARG PROJECT_ROOT
+
+ENV PROJECT_ROOT=${PROJECT_ROOT}
+ENV PYTHONPATH=${PAYTHONPATH}:${PROJECT_ROOT}
 
 RUN groupadd -g ${GROUP_ID} ${USER_NAME} && \
     useradd -m -u ${USER_ID} -g ${USER_NAME} ${USER_NAME}
@@ -21,4 +25,4 @@ USER ${USER_NAME}
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-WORKDIR /workspace
+WORKDIR ${PROJECT_ROOT}
