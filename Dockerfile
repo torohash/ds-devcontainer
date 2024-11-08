@@ -20,9 +20,16 @@ RUN echo "source /usr/share/bash-completion/completions/git" >> /home/${USER_NAM
 # プロンプトの設定
 RUN echo "PROMPT_COMMAND='PS1_CMD1=\$(__git_ps1 \" (%s)\")'; PS1='\[\e[38;5;40m\]\u@\h\[\e[0m\]:\[\e[38;5;39m\]\w\[\e[38;5;214m\]\${PS1_CMD1}\[\e[0m\]\\$ '" >> /home/${USER_NAME}/.bashrc
 
+# デフォルトシェルをbashに設定
+RUN chsh -s /bin/bash ${USER_NAME}
+
 USER ${USER_NAME}
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 WORKDIR ${PROJECT_ROOT}
+
+RUN mkdir -p /home/${USER_NAME}/.jupyter/custom
+
+COPY custom.css /home/${USER_NAME}/.jupyter/custom/custom.css

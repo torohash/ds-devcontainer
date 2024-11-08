@@ -6,3 +6,13 @@ matplotlib
 japanize-matplotlib
 requests
 typing
+pybit
+polars
+seaborn
+statsmodels
+tqdm
+ccxt
+scikit-learn
+scipy
+yfinance
+lightgbm==4.5.0

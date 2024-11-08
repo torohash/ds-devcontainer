@@ -1,0 +1,19 @@
+/* Markdownセルのフォントサイズを変更 */
+.rendered_html {
+    font-size: 12px; /* 希望のサイズに変更 */
+}
+
+/* ~/.jupyter/custom/custom.css */
+div.text_cell_render {
+    font-size: 12px;
+}
+
+/* コードセルのフォントサイズを変更（必要に応じて） */
+.CodeMirror pre {
+    font-size: 14px; /* 希望のサイズに変更 */
+}
+
+/* ツールバーやメニューのフォントサイズを変更（必要に応じて） */
+.navbar, .navbar-default, .navbar-nav > li > a {
+    font-size: 14px;
+}

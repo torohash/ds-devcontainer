@@ -2,7 +2,7 @@
   "name": "Python Development",
   "dockerComposeFile": "./compose.yml",
   "service": "jupyter",
-  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/home/vscode/workspace",
   "customizations": {
     "vscode": {
       "extensions": [
